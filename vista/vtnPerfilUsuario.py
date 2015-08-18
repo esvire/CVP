@@ -1,0 +1,153 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'PerfilUsuario.ui'
+#
+# Created: Sun Aug  2 12:22:45 2015
+#      by: PyQt4 UI code generator 4.10.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_vtnAjusteUusario(object):
+    def setupUi(self, vtnAjusteUusario):
+        vtnAjusteUusario.setObjectName(_fromUtf8("vtnAjusteUusario"))
+        vtnAjusteUusario.resize(355, 350)
+        vtnAjusteUusario.setMinimumSize(QtCore.QSize(355, 350))
+        vtnAjusteUusario.setMaximumSize(QtCore.QSize(355, 480))
+        vtnAjusteUusario.setToolTip(_fromUtf8(""))
+        self.label_15 = QtGui.QLabel(vtnAjusteUusario)
+        self.label_15.setGeometry(QtCore.QRect(30, 10, 305, 43))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans [unknown]"))
+        font.setPointSize(24)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.label_18 = QtGui.QLabel(vtnAjusteUusario)
+        self.label_18.setGeometry(QtCore.QRect(40, 80, 259, 17))
+        self.label_18.setObjectName(_fromUtf8("label_18"))
+        self.label_19 = QtGui.QLabel(vtnAjusteUusario)
+        self.label_19.setGeometry(QtCore.QRect(90, 50, 181, 17))
+        self.label_19.setObjectName(_fromUtf8("label_19"))
+        self.widget = QtGui.QWidget(vtnAjusteUusario)
+        self.widget.setGeometry(QtCore.QRect(0, 110, 351, 221))
+        self.widget.setObjectName(_fromUtf8("widget"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.widget)
+        self.verticalLayout.setMargin(0)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.gridLayout_2 = QtGui.QGridLayout()
+        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
+        self.horizontalLayout_13 = QtGui.QHBoxLayout()
+        self.horizontalLayout_13.setObjectName(_fromUtf8("horizontalLayout_13"))
+        self.label_13 = QtGui.QLabel(self.widget)
+        self.label_13.setMinimumSize(QtCore.QSize(100, 0))
+        self.label_13.setObjectName(_fromUtf8("label_13"))
+        self.horizontalLayout_13.addWidget(self.label_13)
+        spacerItem = QtGui.QSpacerItem(100, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem)
+        self.txtTelefono = QtGui.QLineEdit(self.widget)
+        self.txtTelefono.setMinimumSize(QtCore.QSize(120, 0))
+        self.txtTelefono.setObjectName(_fromUtf8("txtTelefono"))
+        self.horizontalLayout_13.addWidget(self.txtTelefono)
+        self.gridLayout_2.addLayout(self.horizontalLayout_13, 2, 0, 1, 1)
+        self.horizontalLayout_7 = QtGui.QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(_fromUtf8("horizontalLayout_7"))
+        self.label_7 = QtGui.QLabel(self.widget)
+        self.label_7.setMinimumSize(QtCore.QSize(100, 0))
+        self.label_7.setObjectName(_fromUtf8("label_7"))
+        self.horizontalLayout_7.addWidget(self.label_7)
+        spacerItem1 = QtGui.QSpacerItem(100, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem1)
+        self.txtApellido = QtGui.QLineEdit(self.widget)
+        self.txtApellido.setMinimumSize(QtCore.QSize(120, 0))
+        self.txtApellido.setObjectName(_fromUtf8("txtApellido"))
+        self.horizontalLayout_7.addWidget(self.txtApellido)
+        self.gridLayout_2.addLayout(self.horizontalLayout_7, 1, 0, 1, 1)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.label = QtGui.QLabel(self.widget)
+        self.label.setMinimumSize(QtCore.QSize(100, 0))
+        self.label.setObjectName(_fromUtf8("label"))
+        self.horizontalLayout.addWidget(self.label)
+        spacerItem2 = QtGui.QSpacerItem(100, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem2)
+        self.txtNombre = QtGui.QLineEdit(self.widget)
+        self.txtNombre.setMinimumSize(QtCore.QSize(120, 0))
+        self.txtNombre.setObjectName(_fromUtf8("txtNombre"))
+        self.horizontalLayout.addWidget(self.txtNombre)
+        self.gridLayout_2.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+        self.horizontalLayout_14 = QtGui.QHBoxLayout()
+        self.horizontalLayout_14.setObjectName(_fromUtf8("horizontalLayout_14"))
+        self.label_14 = QtGui.QLabel(self.widget)
+        self.label_14.setMinimumSize(QtCore.QSize(100, 0))
+        self.label_14.setObjectName(_fromUtf8("label_14"))
+        self.horizontalLayout_14.addWidget(self.label_14)
+        spacerItem3 = QtGui.QSpacerItem(100, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_14.addItem(spacerItem3)
+        self.txtDireccion = QtGui.QLineEdit(self.widget)
+        self.txtDireccion.setMinimumSize(QtCore.QSize(120, 0))
+        self.txtDireccion.setObjectName(_fromUtf8("txtDireccion"))
+        self.horizontalLayout_14.addWidget(self.txtDireccion)
+        self.gridLayout_2.addLayout(self.horizontalLayout_14, 3, 0, 1, 1)
+        self.verticalLayout.addLayout(self.gridLayout_2)
+        self.horizontalLayout_18 = QtGui.QHBoxLayout()
+        self.horizontalLayout_18.setObjectName(_fromUtf8("horizontalLayout_18"))
+        spacerItem4 = QtGui.QSpacerItem(100, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.horizontalLayout_18.addItem(spacerItem4)
+        spacerItem5 = QtGui.QSpacerItem(100, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.horizontalLayout_18.addItem(spacerItem5)
+        spacerItem6 = QtGui.QSpacerItem(120, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.horizontalLayout_18.addItem(spacerItem6)
+        self.verticalLayout.addLayout(self.horizontalLayout_18)
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.btnCaombioClave = QtGui.QCommandLinkButton(self.widget)
+        self.btnCaombioClave.setMinimumSize(QtCore.QSize(150, 35))
+        self.btnCaombioClave.setMaximumSize(QtCore.QSize(155, 35))
+        self.btnCaombioClave.setObjectName(_fromUtf8("btnCaombioClave"))
+        self.horizontalLayout_2.addWidget(self.btnCaombioClave)
+        self.btnModificar = QtGui.QPushButton(self.widget)
+        self.btnModificar.setMaximumSize(QtCore.QSize(85, 16777215))
+        self.btnModificar.setObjectName(_fromUtf8("btnModificar"))
+        self.horizontalLayout_2.addWidget(self.btnModificar)
+        self.pushButton_2 = QtGui.QPushButton(self.widget)
+        self.pushButton_2.setMaximumSize(QtCore.QSize(85, 16777215))
+        self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
+        self.horizontalLayout_2.addWidget(self.pushButton_2)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+
+        self.retranslateUi(vtnAjusteUusario)
+        QtCore.QMetaObject.connectSlotsByName(vtnAjusteUusario)
+        vtnAjusteUusario.setTabOrder(self.txtNombre, self.txtApellido)
+        vtnAjusteUusario.setTabOrder(self.txtApellido, self.txtTelefono)
+        vtnAjusteUusario.setTabOrder(self.txtTelefono, self.txtDireccion)
+        vtnAjusteUusario.setTabOrder(self.txtDireccion, self.btnModificar)
+        vtnAjusteUusario.setTabOrder(self.btnModificar, self.pushButton_2)
+
+    def retranslateUi(self, vtnAjusteUusario):
+        vtnAjusteUusario.setWindowTitle(_translate("vtnAjusteUusario", "Crear Operario", None))
+        self.label_15.setText(_translate("vtnAjusteUusario", "Ajuste de  Usuario", None))
+        self.label_18.setText(_translate("vtnAjusteUusario", "Los campos con asterisco (*) son obligatorios.", None))
+        self.label_19.setText(_translate("vtnAjusteUusario", "Modifique los datos de usuario", None))
+        self.label_13.setText(_translate("vtnAjusteUusario", "Telefono*", None))
+        self.label_7.setText(_translate("vtnAjusteUusario", "Apellidos*", None))
+        self.label.setText(_translate("vtnAjusteUusario", "Nombres*", None))
+        self.label_14.setText(_translate("vtnAjusteUusario", "Dirección", None))
+        self.btnCaombioClave.setText(_translate("vtnAjusteUusario", "Cambiar Contraseña", None))
+        self.btnModificar.setText(_translate("vtnAjusteUusario", "&Modificar", None))
+        self.pushButton_2.setText(_translate("vtnAjusteUusario", "Cancelar", None))
+

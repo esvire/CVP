@@ -11,19 +11,19 @@ def main():
     table.setWindowTitle("Connect to Mysql Database Example")   
     
     db.setHostName("localhost")
-    db.setDatabaseName("db_club")
+    db.setDatabaseName("db_CVP")
     db.setUserName("root")
     db.setPassword("12345")
     
     if (db.open()==False):
-        QMessageBox.critical(None, "Database Error",db.lastError().text())
+        QMessageBox.critical(None, "Database Error", db.lastError().text())
 
 			    
     query = QSqlQuery("SELECT * FROM tbl_usuario")
     
     table.setColumnCount(query.record().count())
     table.setRowCount(query.size())
-    table.setGeometry(0,0,500,250)
+    table.setGeometry(0, 0,500,250)
     
     index = 0
     while (query.next()):
