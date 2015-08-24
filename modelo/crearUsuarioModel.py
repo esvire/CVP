@@ -3,6 +3,7 @@ from PyQt4.QtSql import *
 from PyQt4.QtGui import *
 from vista.vtnCrearUsuario import *
 
+
 def crearConexion():
     return True
 

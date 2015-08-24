@@ -1,7 +1,9 @@
 __author__ = 'paladin'
-import  sys
-from vista.vtnCrearVehiculo import *
+import sys
 from conector import *
+
+sys.path.append('../vista')
+from vista.vtnCrearVehiculo import *
 from modelo.ajustesModel import *
 
 
@@ -15,8 +17,8 @@ class crearTipoDeVehiculo(QtGui.QDialog):
         QtCore.QObject.connect(self.ui.btnCrearVh, QtCore.SIGNAL("clicked()"), self.insertarTipoDeVehiculo)
 
     def cerrarVentana(self):
-        #self.ajusteGenerales = ajustesDeParqueadero()
-        #self.ajusteGenerales.show()
+        # self.ajusteGenerales = ajustesDeParqueadero()
+        # self.ajusteGenerales.show()
         self.close()
         return
 
@@ -29,23 +31,24 @@ class crearTipoDeVehiculo(QtGui.QDialog):
         especial = int(self.ui.spinEspecial.text())
         numeroCeldas = int(self.ui.spinCeldas.text())
 
-
         if nombreVhl == "":
-            QtGui.QMessageBox.information(self,"campo faltante", "Ingrese Nombre del tipo de vehículo!")
+            QtGui.QMessageBox.information(self, "Campo faltante", "Ingrese nombre del tipo de vehículo.")
             return
 
         if numeroCeldas <= 0:
-            QtGui.QMessageBox.information(self,"campo faltante", "Ingrese numero de celdas superior a 0!")
+            QtGui.QMessageBox.information(self, "Campo faltante", "Ingrese numero de celdas superior a 0!")
             return
 
         self.conector.abrirConexio()
 
-        sqluno = "call validarTipoDeVehiculo('"+nombreVhl+"')"
-        query= QSqlQueryModel()
+        sqluno = "call validarTipoDeVehiculo('" + nombreVhl + "')"
+        query = QSqlQueryModel()
         query.setQuery(sqluno)
-        resultado=query.record(0)
+        resultado = query.record(0)
+
         if nombreVhl == str(resultado.value(0)):
-            QtGui.QMessageBox.information(self,"Registro Duplicado", "El tipo de vehiculo '"+nombreVhl+"' ya existe !")
+            QtGui.QMessageBox.information(self, "Registro Duplicado",
+                                          "El tipo de vehiculo '" + nombreVhl + "' ya existe !")
             return
         else:
             sql = "call insertarTipoDeVehiculo(:nombre, :fraccion, :hora, :dia, :mes, :especial, :nCeldas)"
@@ -55,12 +58,12 @@ class crearTipoDeVehiculo(QtGui.QDialog):
             inserccion.bindValue(":fraccion", fraccion)
             inserccion.bindValue(":hora", hora)
             inserccion.bindValue(":dia", dia)
-            inserccion.bindValue(":mes",mes)
+            inserccion.bindValue(":mes", mes)
             inserccion.bindValue(":especial", especial)
             inserccion.bindValue(":nCeldas", numeroCeldas)
 
-            if inserccion.exec_():
-                QtGui.QMessageBox.information(self,"Crear Tipo Vehículo", "Tipo de vehículo creado con éxito. (reinicie el programa para visualizar los cambios en la ventana principal)")
-            else:
-                QtGui.QMessageBox.information(self,"Crear Tipo Vehículo", "Error En La Base de Datos!!!")
-
+        if inserccion.exec_():
+            QtGui.QMessageBox.information(self, "Crear Tipo Vehículo",
+                                          "Tipo de vehículo creado con éxito. (reinicie el programa para visualizar los cambios en la ventana principal)")
+        else:
+            QtGui.QMessageBox.information(self, "Crear Tipo Vehículo", "Error En La Base de Datos!!!")

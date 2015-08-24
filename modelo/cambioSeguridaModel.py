@@ -61,10 +61,12 @@ class cambioSeguridad(QtGui.QDialog):
                                    QtGui.QMessageBox.No)
         if self.claveValida and confirmacion:
             self.coneccion.abrirConexio()
-            sql = "CALL modificarClave(?)"
+            sql = "CALL modificarClave(?,?)"
             query = QSqlQuery()
             query.prepare(sql)
-            query.bindValue(0, claveNuevaUno)
+            query.bindValue(0, self.usr)
+            query.bindValue(1, claveNuevaUno)
+
             if query.exec_() == True:
                 QtGui.QMessageBox.information(self, "Modificación de contraseña", "Contraseña modificada con éxito!")
                 self.ui.txtCLaveVieja.setText("")
@@ -121,8 +123,9 @@ class cambioSeguridad(QtGui.QDialog):
             sql = "CALL modificarPregunta(?,?)"
             query = QSqlQuery()
             query.prepare(sql)
-            query.bindValue(0, pregunta)
-            query.bindValue(1, respuesta)
+            query.bindValue(0, self.usr)
+            query.bindValue(1, pregunta)
+            query.bindValue(2, respuesta)
             if query.exec_() == True:
                 QtGui.QMessageBox.information(self, "Modificación de Pregunta", "pegunta y respuesta modificadas con éxito!")
                 self.ui.txtCLaveViejaPre.setText("")
